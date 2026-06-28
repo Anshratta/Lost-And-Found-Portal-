@@ -1,0 +1,234 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:
+    radial-gradient(
+        circle at center,
+        #982598 0%,
+        #15173D 60%
+    );
+
+    min-height:100vh;
+}
+
+/* Navbar */
+
+nav{
+    color: #F1E9E9;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a{
+    color:#F1E9E9;
+    text-decoration:none;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: #E491C9;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #E491C9;
+    border-radius: 999px;
+    
+}
+
+.search input{
+    width: 220px;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #F1E9E9;
+    font-size: 14px;
+}
+
+.search input::placeholder{
+    color: rgba(241,233,233,0.7);
+}
+
+.search button{
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: #F1E9E9;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+.search button:hover{
+    background: rgba(255,255,255,0.12);
+}
+
+.search:focus-within{
+    border-color: #B86AD9;
+    box-shadow: 0 0 10px rgba(184,106,217,0.35);
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:transparent;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+    color: #F1E9E9;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#F1E9E9;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    margin:10px;
+    font-size:16px;
+}
+
+.btn-primary{
+    color: white;
+    background: 
+        linear-gradient(to bottom right, #A855F7, #D946EF);
+}
+
+.btn-secondary{
+    color: white;
+    background: transparent;
+    border: 1px solid #B86AD9;
+}
+
+.btn-primary:hover{
+    background: 
+    linear-gradient(to bottom right, #C66CFF, #F062FF);
+}
+
+.btn-secondary:hover{
+    background: #241D57;
+}
+
+/* Stats */
+
+.stats{
+    padding:60px 10%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.card{
+    background:
+        linear-gradient(to bottom right, #30266B, #B86AD9);
+    color: white;
+    border: none;
+    text-align: left;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    color: #E491C9;
+    margin-bottom:10px;
+}
+
+.card:hover{
+    background: transparent;
+    border: 3px solid #B86AD9;
+}
+
+/* Steps */
+
+.steps{
+    padding:60px 10%;
+    text-align:center;
+    color: #F1E9E9;
+}
+
+.steps h2{
+    margin-bottom:30px;
+}
+
+.step-container{
+    color: white;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.step{
+    background:#A855F7;
+    padding:20px;
+    border-radius:10px;
+    width:220px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+
+footer{
+    background:#0f172a;
+    color:#F1E9E9;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .stats,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
